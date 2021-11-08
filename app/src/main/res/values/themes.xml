@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppAcademia" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/vermel</item>
+        <item name="colorPrimaryVariant">@color/vermelho</item>
+        <item name="colorOnPrimary">@color/vermel</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/verm</item>
+        <item name="colorSecondaryVariant">@color/lar</item>
+        <item name="colorOnSecondary">@color/ama</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
