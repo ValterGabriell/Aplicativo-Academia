@@ -12,7 +12,9 @@ class ListaAdapter(val lista : List<DataModel>) : RecyclerView.Adapter<ListaAdap
     inner class ListaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)  {
         fun bind(dataModel: DataModel) {
             itemView.findViewById<TextView>(R.id.txtNameS).text = "${dataModel.name} ${dataModel.sobrename}"
-            itemView.findViewById<TextView>(R.id.txtId).text = "id: ${dataModel.id}"
+            itemView.findViewById<TextView>(R.id.txtId).text = "CPF: ${dataModel.cpf}"
+            itemView.findViewById<TextView>(R.id.txtSexoAdapter).text = "Sexo: ${dataModel.sexo}"
+            itemView.findViewById<TextView>(R.id.txtPesoAdapter).text = "Peso atual: ${dataModel.peso}"
         }
 
     }

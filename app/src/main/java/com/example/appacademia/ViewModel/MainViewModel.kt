@@ -14,12 +14,12 @@ class MainViewModel (application: Application) : AndroidViewModel(application){
 
 
     fun getName(): List<String> {
-        return RoomApplication(getApplication()).getAll().map { it.name }
+        return RoomApplication(getApplication()).getAll().map { it.cpf }
     }
 
-    fun verificaName(context: Context ,name:String){
+    fun verificaName(context: Context ,cpf:String){
         val lista = getName()
-        if (lista.contains(name)){
+        if (lista.contains(cpf)){
             Toast.makeText(context, "Sucesso ao Logar", Toast.LENGTH_SHORT).show()
             context.startActivity(Intent(context, SucessActivity::class.java))
         }else{

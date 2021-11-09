@@ -3,6 +3,7 @@ package com.example.appacademia.View
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.appacademia.R
@@ -19,7 +20,13 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Academia"
 
         binding.btnSubmit.setOnClickListener {
-            model.verificaName(this, binding.etMainName.text.toString())
+            if (binding.etMainName.text.isNotEmpty()){
+                val cpf = binding.etMainName.text.toString()
+                model.verificaName(this, cpf)
+            }else{
+                Toast.makeText(this, "Preencha o CPF", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         binding.button2.setOnClickListener {
@@ -31,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             val inteint = Intent(this, ListarActivity::class.java)
             startActivity(inteint)
         }
+
 
     }
 

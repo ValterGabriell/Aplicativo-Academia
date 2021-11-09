@@ -26,7 +26,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Digite seu primeiro nome"
+            android:text="Digite seu CPF"
             android:textColor="@color/verm"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -36,8 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Digite seu nome"
-            android:inputType="textPersonName"
+            android:hint="Digite seu cpf"
+            android:inputType="number"
             android:minHeight="48dp"
             android:textColor="@color/ver"
             android:textColorHint="@color/ver" />
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:background="@color/amarelo"
-            android:text="submit"
+            android:text="Entrar"
             android:textColor="@color/black" />
 
         <Button
