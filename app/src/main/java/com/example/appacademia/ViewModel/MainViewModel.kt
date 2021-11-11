@@ -19,7 +19,7 @@ class MainViewModel (application: Application) : AndroidViewModel(application){
 
     fun verificaName(context: Context ,cpf:String){
         val lista = getName()
-        if (cpf.length != 8){
+        if (cpf.length != 11){
             Toast.makeText(context, "CPF incorreto", Toast.LENGTH_SHORT).show()
         }else{
             if (lista.contains(cpf)){
