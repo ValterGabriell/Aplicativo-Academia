@@ -19,12 +19,17 @@ class MainViewModel (application: Application) : AndroidViewModel(application){
 
     fun verificaName(context: Context ,cpf:String){
         val lista = getName()
-        if (lista.contains(cpf)){
-            Toast.makeText(context, "Sucesso ao Logar", Toast.LENGTH_SHORT).show()
-            context.startActivity(Intent(context, SucessActivity::class.java))
+        if (cpf.length != 8){
+            Toast.makeText(context, "CPF incorreto", Toast.LENGTH_SHORT).show()
         }else{
-            Toast.makeText(context, "Usuario nao encontrado, faça seu cadastro", Toast.LENGTH_SHORT).show()
+            if (lista.contains(cpf)){
+                Toast.makeText(context, "Sucesso ao Logar", Toast.LENGTH_SHORT).show()
+                context.startActivity(Intent(context, SucessActivity::class.java))
+            }else{
+                Toast.makeText(context, "Usuario nao encontrado, faça seu cadastro", Toast.LENGTH_SHORT).show()
+            }
         }
+
     }
 
 
